@@ -1,0 +1,77 @@
+<span class="hljs-comment"># A file is a class!</span>
+
+<span class="hljs-comment"># Inheritance</span>
+
+<span class="hljs-keyword">extends</span> BaseClass
+
+<span class="hljs-comment"># (optional) class definition with a custom icon</span>
+
+<span class="hljs-keyword">class_name</span> MyClass, <span class="hljs-string">&quot;res://path/to/optional/icon.svg&quot;</span>
+
+
+<span class="hljs-comment"># Member variables</span>
+
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">5</span>
+<span class="hljs-keyword">var</span> s = <span class="hljs-string">&quot;Hello&quot;</span>
+<span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+<span class="hljs-keyword">var</span> dict = { <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-string">&quot;value&quot;</span>, <span class="hljs-number">2</span>: <span class="hljs-number">3</span> }
+<span class="hljs-keyword">var</span> typed_var: <span class="hljs-types">int</span>
+<span class="hljs-keyword">var</span> inferred_type := <span class="hljs-string">&quot;String&quot;</span>
+
+<span class="hljs-comment"># Constants</span>
+
+<span class="hljs-keyword">const</span> ANSWER = <span class="hljs-number">42</span>
+<span class="hljs-keyword">const</span> THE_NAME = <span class="hljs-string">&quot;Charly&quot;</span>
+
+<span class="hljs-comment"># Enums</span>
+
+<span class="hljs-keyword">enum</span> { UNIT_NEUTRAL, UNIT_ENEMY, UNIT_ALLY }
+<span class="hljs-keyword">enum</span> Named { THING_1, THING_2, ANOTHER_THING = -<span class="hljs-number">1</span> }
+
+<span class="hljs-comment"># Built-in vector types</span>
+
+<span class="hljs-keyword">var</span> v2 = <span class="hljs-types">Vector2</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+<span class="hljs-keyword">var</span> v3 = <span class="hljs-types">Vector3</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+
+
+<span class="hljs-comment"># Function</span>
+
+<span class="hljs-keyword">func</span> some_function(param1, param2):
+	<span class="hljs-keyword">var</span> local_var = <span class="hljs-number">5</span>
+
+	<span class="hljs-keyword">if</span> param1 &lt; local_var:
+		<span class="hljs-built_in">print</span>(param1)
+	<span class="hljs-keyword">elif</span> param2 &gt; <span class="hljs-number">5</span>:
+		<span class="hljs-built_in">print</span>(param2)
+	<span class="hljs-keyword">else</span>:
+		<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Fail!&quot;</span>)
+
+	<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">20</span>):
+		<span class="hljs-built_in">print</span>(i)
+
+	<span class="hljs-keyword">while</span> param2 != <span class="hljs-number">0</span>:
+		param2 -= <span class="hljs-number">1</span>
+
+	<span class="hljs-keyword">var</span> local_var2 = param1 + <span class="hljs-number">3</span>
+	<span class="hljs-keyword">return</span> local_var2
+
+
+<span class="hljs-comment"># Functions override functions with the same name on the base/parent class.</span>
+<span class="hljs-comment"># If you still want to call them, use &#x27;.&#x27; (like &#x27;super&#x27; in other languages).</span>
+
+<span class="hljs-keyword">func</span> something(p1, p2):
+	.something(p1, p2)
+
+
+<span class="hljs-comment"># Inner class</span>
+
+<span class="hljs-keyword">class</span> Something:
+	<span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>
+
+
+<span class="hljs-comment"># Constructor</span>
+
+<span class="hljs-keyword">func</span> _init():
+	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Constructed!&quot;</span>)
+	<span class="hljs-keyword">var</span> lv = Something.new()
+	<span class="hljs-built_in">print</span>(lv.a)

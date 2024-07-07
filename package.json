@@ -1,0 +1,27 @@
+{
+  "name": "highlightjs-gdscript",
+  "version": "1.0.0",
+  "author": "Thaddeus Crews <repiteo@outlook.com>",
+  "description": "GDScript support for highlight.js",
+  "main": "src/languages/gdscript.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Repiteo/highlightjs-gdscript.git"
+  },
+  "keywords": [
+    "godot",
+    "gdscript",
+    "highlight",
+    "highlight.js",
+    "highlightjs"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Repiteo/highlightjs-gdscript/issues"
+  },
+  "homepage": "https://github.com/Repiteo/highlightjs-gdscript#readme",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "highlight.js": "^11.9.0"
+  }
+}
